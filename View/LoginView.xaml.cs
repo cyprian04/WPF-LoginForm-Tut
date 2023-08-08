@@ -31,5 +31,10 @@ namespace Wpf_LoginForm_Tut.View
                 DragMove();
             }
         }
+
+        private void btnMinimalize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

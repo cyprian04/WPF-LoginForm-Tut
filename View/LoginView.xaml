@@ -67,7 +67,8 @@
                             FontSize="16"
                             FontFamily="Montserrat"
                             Cursor="Hand"
-                            Grid.Column="1">
+                            Grid.Column="1"
+                            Click="btnMinimalize_Click">
                         
                     </Button>
                 </Grid>
