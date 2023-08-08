@@ -59,6 +59,7 @@
                                Grid.Column="0"
                                VerticalAlignment="Center"
                                Margin="10,0,0,0"/>
+                    
                     <Button x:Name="btnMinimalize"
                             Background="#28AEED"
                             BorderThickness="0"
@@ -69,7 +70,16 @@
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMinimalize_Click">
-                        
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
                     </Button>
 
                     <Button x:Name="btnClose"
@@ -82,7 +92,6 @@
                             Cursor="Hand"
                             Grid.Column="2"
                             Click="btnClose_Click">
-
                     </Button>
                 </Grid>
             </Grid>
