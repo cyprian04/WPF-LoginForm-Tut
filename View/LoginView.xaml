@@ -1,0 +1,30 @@
+﻿<Window x:Class="Wpf_LoginForm_Tut.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_LoginForm_Tut.View"
+        mc:Ignorable="d"
+        Title="LoginView" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown"> <!-- Event to drag window when mouse pressed -->
+
+    <Border CornerRadius="50"
+            Background="#1b1448"
+            BorderThickness="5">
+        <Border.BorderBrush> <!-- Setting a gradient for border -->
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0" />
+                <GradientStop Color="#DA34AE" Offset="0.75" />
+                <GradientStop Color="#8A16C1" Offset="1" />
+
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        
+    </Border>
+    
+</Window>
