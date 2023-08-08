@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_LoginForm_Tut.View"
         mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800"
+        Title="LoginView" Height="550" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -13,30 +13,67 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"> <!-- Event to drag window when mouse pressed -->
 
-    <Border CornerRadius="50">
+    <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/Images/back-image.jpg"
                         Stretch="None"/>
         </Border.Background>
-    
-        <Border CornerRadius="50"
-                BorderThickness="5"
-                Opacity="0.95"> <!-- We add opacity to the this border, bec in the back we have another border with image as background-->
-            <Border.BorderBrush>
-                <!-- Setting a gradient for border -->
+
+        <Border CornerRadius="10"
+                BorderThickness="1"
+                Opacity="0.95">  <!-- We add opacity to the this border, bec in the back we have another border with image as background-->
+            <Border.BorderBrush> <!-- Setting a gradient for border -->
+                
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#462AD8" Offset="0" />
                     <GradientStop Color="#DA34AE" Offset="0.75" />
                     <GradientStop Color="#8A16C1" Offset="1" />
                 </LinearGradientBrush>
             </Border.BorderBrush>
+            
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                     <GradientStop Color="#060531" Offset="0" />
                     <GradientStop Color="#1B1448" Offset="0.75" />
                 </LinearGradientBrush>
             </Border.Background>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/> <!-- Made only for padding-->
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="LOG IN"
+                               Foreground="DarkGray"
+                               FontSize="10"
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                    <Button x:Name="btnMinimalize"
+                            Background="#28AEED"
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1">
+                        
+                    </Button>
+                </Grid>
+            </Grid>
+
         </Border>
-        
+
     </Border>
 </Window>
