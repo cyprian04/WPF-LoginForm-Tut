@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_LoginForm_Tut.View"
+        xmlns:ViewModel="clr-namespace:Wpf_LoginForm_Tut.ViewModel"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
         WindowStyle="None"
@@ -13,6 +14,17 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"> <!-- Event to drag window when mouse pressed -->
 
+    <Window.DataContext>
+        <ViewModel:LoginViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/> <!-- Boolean to enumeration class so we can convert later-->
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}" />
+    </Window.Visibility>
     <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/Images/back-image.jpg"
