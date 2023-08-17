@@ -105,6 +105,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CustomControls\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
