@@ -25,7 +25,6 @@ namespace Wpf_LoginForm_Tut.ViewModel
                 OnPropertyChanged(nameof(Username)); // passing whole property as parameter, not variable directly
             }
         }
-
         
         public SecureString Password
         {
@@ -37,7 +36,6 @@ namespace Wpf_LoginForm_Tut.ViewModel
             }
         }
 
-
         public string ErrorMessage
         {
             get => _errorMessage;
@@ -47,7 +45,6 @@ namespace Wpf_LoginForm_Tut.ViewModel
                 OnPropertyChanged(nameof(ErrorMessage));
             }
         }
-
 
         public bool IsVisible
         {

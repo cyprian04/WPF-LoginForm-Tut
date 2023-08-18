@@ -16,6 +16,7 @@
 
     <Window.DataContext>
         <ViewModel:LoginViewModel/>
+        <!--Odpowiednik zapisu w konstruktorze LoginView: DataContext = new LoginViewModel(); -->
     </Window.DataContext>
 
     <Window.Resources>
