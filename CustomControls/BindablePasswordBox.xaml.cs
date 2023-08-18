@@ -18,9 +18,9 @@ using System.Windows.Shapes;
 namespace Wpf_LoginForm_Tut.CustomControls
 {
     /// <summary>
-    /// Logika interakcji dla klasy BindablePasswordBox.xaml
+    /// Logika interakcji dla klasy BindablePasswordBox.xaml (We use CustomControl and DependencyProperty mainly for security reasons
     /// </summary>
-    public partial class BindablePasswordBox : UserControl
+    public partial class BindablePasswordBox : UserControl 
     {
         public static readonly DependencyProperty PasswordProperty = DependencyProperty.Register("Password", typeof(SecureString), typeof(BindablePasswordBox));
 
