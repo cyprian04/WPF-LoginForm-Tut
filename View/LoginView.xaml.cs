@@ -41,10 +41,5 @@ namespace Wpf_LoginForm_Tut.View
         {
             Application.Current.Shutdown(); 
         }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            //for future projects...
-        }
     }
 }
